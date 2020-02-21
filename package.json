@@ -1,7 +1,14 @@
 {
   "name": "qrcode-generator",
+  "author": "Eduardo Henrique Rotundaro",
   "version": "0.1.0",
+  "homepage": "https://github.com/EduardoRotundaro/qrcode-badge-generator",
+  "description": "A QRCode generator.",
   "private": true,
+  "keywords": [
+    "react",
+    "qrcode"
+  ],
   "dependencies": {
     "@testing-library/jest-dom": "^4.2.4",
     "@testing-library/react": "^9.4.0",

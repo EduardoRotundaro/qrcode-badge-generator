@@ -1,0 +1,2 @@
+export const generateQRCode = function(){
+}

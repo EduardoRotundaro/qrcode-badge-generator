@@ -1,0 +1,12 @@
+@import 'abstracts/variables';
+@import 'abstracts/mixins';
+
+@import 'vendors/bootstrap';
+
+@import 'base/typography';
+
+@import '../components/Footer/styles';
+@import '../components/Header/styles';
+@import '../components/Main/styles';
+
+@import 'themes/theme';
