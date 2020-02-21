@@ -1,5 +1,5 @@
 {
-  "name": "qrcode-generator",
+  "name": "qrcode-badge-generator",
   "author": "Eduardo Henrique Rotundaro",
   "version": "0.1.0",
   "homepage": "https://github.com/EduardoRotundaro/qrcode-badge-generator",
@@ -13,9 +13,16 @@
     "@testing-library/jest-dom": "^4.2.4",
     "@testing-library/react": "^9.4.0",
     "@testing-library/user-event": "^7.2.1",
+    "bootstrap": "^4.4.1",
+    "dom-to-image": "^2.6.0",
+    "font-awesome": "^4.7.0",
+    "node-sass": "^4.13.1",
+    "qrcode-generator": "^1.4.4",
     "react": "^16.12.0",
     "react-dom": "^16.12.0",
-    "react-scripts": "3.4.0"
+    "react-router-dom": "^5.1.2",
+    "react-scripts": "3.4.0",
+    "react-toast-notifications": "^2.4.0"
   },
   "scripts": {
     "start": "react-scripts start",
