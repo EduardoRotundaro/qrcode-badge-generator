@@ -1,0 +1,12 @@
+header{
+    @extend .shadow;
+    .navbar--logo{
+        height: 60px;
+    }
+    .nav-link{
+        color: $primary !important;
+    }
+    .active{
+        font-weight: bold;
+    }
+}
