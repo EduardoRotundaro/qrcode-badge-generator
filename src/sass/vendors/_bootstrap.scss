@@ -1,1 +1,13 @@
+$theme-colors: (
+  "primary": $primary,
+  "secondary": $secondary,
+  "info": $info,
+  "warning": $warning,
+  "danger": $danger,
+  "success": $success,
+  "dark": $dark,
+  "light": $light,
+  "white": $white
+);
+
 @import '../../../node_modules/bootstrap/scss/bootstrap.scss';
