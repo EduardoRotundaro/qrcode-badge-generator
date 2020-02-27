@@ -24,7 +24,13 @@ export default () => {
 
     return (
         <section>
-            <div className="row">
+            <div className="row justify-content-center">
+                <div className="col-12 col-lg-2">
+                    <button type="button" className="btn btn-block btn-secondary"><i className="fa fa-download"></i>&nbsp;Download as PNG</button>
+                </div>
+                <div className="col-12 col-lg-2">
+                    <button type="button" className="btn btn-block btn-secondary"><i className="fa fa-download"></i>&nbsp;Download as JPEG</button>
+                </div>
             </div>
         </section>
     );

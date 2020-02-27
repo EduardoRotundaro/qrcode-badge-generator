@@ -1,12 +1,15 @@
 header{
     @extend .shadow;
-    .navbar--logo{
+    @extend .p-2;
+    @extend .fixed-top;
+    z-index: 1;
+    background: $white;
+    img{
         height: 60px;
     }
-    .nav-link{
-        color: $primary !important;
-    }
-    .active{
-        font-weight: bold;
+    .header--title{
+        font-family: $font-secondary;
+        color: $primary;
+        font-size: 20px;
     }
 }

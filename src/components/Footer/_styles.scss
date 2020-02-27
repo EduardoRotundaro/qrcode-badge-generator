@@ -1,0 +1,11 @@
+footer{
+    @extend .p-4;
+    @extend .fixed-bottom;
+    z-index: 99;
+    background: $white;
+    .footer--version{
+        color: $primary;
+        font-weight: bold;
+        font-size: 18px;
+    }
+}
