@@ -8,7 +8,7 @@ export default () => {
             <div className="container">
                 <div className="row justify-content-center">
                     <div className="col-12 col-lg-5">
-                        <p>Mussum Ipsum, cacilds vidis litro abertis. Posuere libero varius. Nullam a nisl ut ante blandit hendrerit. Aenean sit amet nisi. Si u mundo tá muito paradis? Toma um mé que o mundo vai girarzis! Quem num gosta di mim que vai caçá sua <a href="https://github.com/florinpop17/app-ideas" target="_blank" rel="noopener noreferrer">turmis</a>! Casamentiss faiz malandris se pirulitá.</p>
+                        <p>Mussum Ipsum, cacilds vidis litro abertis. Aenean sit amet nisi. Si u mundo tá muito paradis? Toma um mé que o mundo vai girarzis! Quem num gosta di mim que vai caçá sua <a href="https://github.com/florinpop17/app-ideas" target="_blank" rel="noopener noreferrer">turmis</a>! Casamentiss faiz malandris se pirulitá.</p>
                     </div>
                     <div className="col-12 col-lg-5">
                         <div className="col-6 col-lg-12">

@@ -1,13 +1,14 @@
-import QRCode from 'qrcode-generator';
+import qrcode from 'qrcode-generator';
 import domtoimage from 'dom-to-image';
 import {saveAs} from 'file-saver';
 
 export const generateQRCode = function(typeNumber=4, errorCorrectionLevel='L', data){
     try{
-        let qrcd =  QRCode(typeNumber, errorCorrectionLevel);
+        let qrcd = qrcode(typeNumber, errorCorrectionLevel);
         qrcd.addData(data);
         qrcd.make();
-        return qrcd.createImgTag();
+        let tst = qrcd.createImgTag(); 
+        return tst;
     }
     catch(err){
         return null;

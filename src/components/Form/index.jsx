@@ -1,16 +1,16 @@
-import React from 'react';
+import React, {useState} from 'react';
 
 import {generateQRCode} from '../../generators';
 import {showErrorToast, showSuccessToast, showWarningToast} from '../../functions';
 
 export default () => {
+    const [data, setData] = useState('');
 
-    function isValidData(){
-    }
+    const isValidData = () => !!data;
 
     function generate(){
         if(isValidData()){
-            const result = generateQRCode();
+            const result = generateQRCode(undefined, undefined, data);
             if(result){
                 document.getElementById('placeholder').innerHTML = result;
                 showSuccessToast('Awesome! The QRCode was successfully created.');
@@ -43,13 +43,22 @@ export default () => {
                 </div>
                 <div className="row justify-content-center">
                     <div className="col-12 col-lg-6 form-group">
-                        <label htmlFor="qrCodeData">QRCode Data</label>
-                        <textarea className="form-control" id="qrCodeData" rows="3"></textarea>
+                        <textarea 
+                            className="form-control"
+                            placeholder="Enter your data here"
+                            id="qrCodeData" 
+                            rows="3" 
+                            value={data}
+                            onChange={(e)=> setData(e.target.value)}
+                        >
+                        </textarea>
                     </div>
                 </div>
                 <div className="row justify-content-center">
                     <div className="col-12 col-lg-3">
-                        <button className="btn btn-primary btn-block"><i className="fa fa-lg fa-qrcode"></i>&nbsp;MAKE</button>
+                        <button type="button" className="btn btn-primary btn-block" onClick={generate}>
+                            <i className="fa fa-lg fa-qrcode"></i>&nbsp;MAKE
+                        </button>
                     </div>
                 </div>
             </form>
