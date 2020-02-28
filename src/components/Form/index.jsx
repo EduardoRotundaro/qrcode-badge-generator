@@ -13,7 +13,7 @@ export default () => {
             const result = generateQRCode(undefined, undefined, data);
             if(result){
                 document.getElementById('placeholder').innerHTML = result;
-                showSuccessToast('Awesome! The QRCode was successfully created.');
+                showSuccessToast('Awesome!');
             }
             else{
                 showErrorToast('Oh, something went wrong! Please, try again.');
@@ -31,18 +31,31 @@ export default () => {
                     <div className="col-12 col-lg-2 form-group">
                         <label htmlFor="typeNumber">Type Number</label>
                         <select className="form-control" id="typeNumber">
-                            <option>1</option>
+                            <option value="">Auto Detect</option>
+                            <option value="1">1</option>
+                            <option value="40">40</option>
                         </select>
                     </div>
-                    <div className="col-12 col-lg-4 form-group">
+                    <div className="col-12 col-lg-3 form-group">
                         <label htmlFor="errorCorrectionLevel">Error Correction Level</label>
                         <select className="form-control" id="errorCorrectionLevel">
-                            <option>1</option>
+                            <option value="">Default</option>
+                            <option value="L">Low (7%)</option>
+                            <option value="M">Medium (15%)</option>
+                            <option value="Q">Quartile (25%)</option>
+                            <option value="H">High (30%)</option>
+                        </select>
+                    </div>
+                    <div className="col-12 col-lg-3 form-group">
+                        <label htmlFor="qrCodeSize">QRCode Size</label>
+                        <select className="form-control" id="qrCodeSize">
+                            <option value="2">32px</option>
+                            <option value="3">40px</option>
                         </select>
                     </div>
                 </div>
                 <div className="row justify-content-center">
-                    <div className="col-12 col-lg-6 form-group">
+                    <div className="col-12 col-lg-8 form-group">
                         <textarea 
                             className="form-control"
                             placeholder="Enter your data here"

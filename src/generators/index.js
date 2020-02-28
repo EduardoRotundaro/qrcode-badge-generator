@@ -7,7 +7,7 @@ export const generateQRCode = function(typeNumber=4, errorCorrectionLevel='L', d
         let qrcd = qrcode(typeNumber, errorCorrectionLevel);
         qrcd.addData(data);
         qrcd.make();
-        let tst = qrcd.createImgTag(); 
+        let tst = qrcd.createImgTag(5); 
         return tst;
     }
     catch(err){

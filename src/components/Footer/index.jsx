@@ -1,22 +1,27 @@
 import React from 'react';
 
-import {APP_VERSION, GITHUB_REPOSITORY} from '../../constants';
+import {APP_VERSION, GITHUB_REPOSITORY, FOOTER_DESCRIPTION} from '../../constants';
 
 export default () => {
+    const {APP_IDEAS_LINK, PART_1, PART_2, PROFILE_LINK, APP_IDEAS, PROFILE} = FOOTER_DESCRIPTION;
     return (
         <footer>
             <div className="container">
                 <div className="row justify-content-center">
-                    <div className="col-12 col-lg-5">
-                        <p>Mussum Ipsum, cacilds vidis litro abertis. Aenean sit amet nisi. Si u mundo tá muito paradis? Toma um mé que o mundo vai girarzis! Quem num gosta di mim que vai caçá sua <a href="https://github.com/florinpop17/app-ideas" target="_blank" rel="noopener noreferrer">turmis</a>! Casamentiss faiz malandris se pirulitá.</p>
-                    </div>
-                    <div className="col-12 col-lg-5">
-                        <div className="col-6 col-lg-12">
-                            <a href={GITHUB_REPOSITORY} target="_blank" rel="noopener noreferrer" className="btn btn-outline-primary btn-lg mr-2"><i className="fa fa-github"></i>&nbsp;Github</a>
-                        </div>
-                        <div className="col-6 col-lg-12 mt-2">
+                    <div className="col-12 col-lg-8">
+                        <p className="mb-0 text-center">
+                            {PART_1}
+                            <a href={APP_IDEAS_LINK} target="_blank" rel="noopener noreferrer">{APP_IDEAS}</a>
+                            {PART_2}
+                            <a href={PROFILE_LINK} target="_blank" rel="noopener noreferrer">{PROFILE}</a>
+                            <br></br>
                             <span className="footer--version">v&nbsp;{APP_VERSION}</span>
-                        </div>
+                        </p>
+                    </div>
+                </div>
+                <div className="row justify-content-center">
+                    <div className="col-12 col-lg-2 mb-2">
+                        <a href={GITHUB_REPOSITORY} target="_blank" rel="noopener noreferrer" className="btn btn-block btn-outline-primary btn-sm mr-2"><i className="fa fa-github"></i>&nbsp;Github</a>
                     </div>
                 </div>
             </div>
