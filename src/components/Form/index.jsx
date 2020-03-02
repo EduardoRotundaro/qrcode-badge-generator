@@ -2,15 +2,27 @@ import React, {useState} from 'react';
 
 import {generateQRCode} from '../../generators';
 import {showErrorToast, showSuccessToast, showWarningToast} from '../../functions';
+import {QRCODE_OPTIONS} from '../../constants';
 
 export default () => {
     const [data, setData] = useState('');
+    const [typeNumber, setTypeNumber] = useState('0');
+    const [errorCorrectionLevel, setErrorCorrectionLevel] = useState('L');
+    const [qrCodeSize, setQrCodeSize] = useState('2');
+    const [confirmed, setConfirmed] = useState(false);
+
+    const {ERROR_CORRECTION_LEVEL, SIZE, TYPE_NUMBER} = QRCODE_OPTIONS;
 
     const isValidData = () => !!data;
 
+    function renderSelectOptions(arr=[]){
+        return arr.map(({value, name}) => <option key={`opt_${value}`} value={value}>{name}</option> );
+    }
+
     function generate(){
+        setConfirmed(!confirmed);
         if(isValidData()){
-            const result = generateQRCode(undefined, undefined, data);
+            const result = generateQRCode(typeNumber, errorCorrectionLevel, data, qrCodeSize);
             if(result){
                 document.getElementById('placeholder').innerHTML = result;
                 showSuccessToast('Awesome!');
@@ -30,34 +42,42 @@ export default () => {
                 <div className="row justify-content-center">
                     <div className="col-12 col-lg-2 form-group">
                         <label htmlFor="typeNumber">Type Number</label>
-                        <select className="form-control" id="typeNumber">
-                            <option value="">Auto Detect</option>
-                            <option value="1">1</option>
-                            <option value="40">40</option>
+                        <select 
+                            className="form-control" 
+                            id="typeNumber"
+                            value={typeNumber}
+                            onChange={(e) => setTypeNumber(e.target.value)}
+                        >
+                            {renderSelectOptions(TYPE_NUMBER)}
                         </select>
                     </div>
                     <div className="col-12 col-lg-3 form-group">
                         <label htmlFor="errorCorrectionLevel">Error Correction Level</label>
-                        <select className="form-control" id="errorCorrectionLevel">
-                            <option value="">Default</option>
-                            <option value="L">Low (7%)</option>
-                            <option value="M">Medium (15%)</option>
-                            <option value="Q">Quartile (25%)</option>
-                            <option value="H">High (30%)</option>
+                        <select 
+                            className="form-control" 
+                            id="errorCorrectionLevel"
+                            value={errorCorrectionLevel}
+                            onChange={(e) => setErrorCorrectionLevel(e.target.value)}
+                        >
+                            {renderSelectOptions(ERROR_CORRECTION_LEVEL)}
                         </select>
                     </div>
                     <div className="col-12 col-lg-3 form-group">
                         <label htmlFor="qrCodeSize">QRCode Size</label>
-                        <select className="form-control" id="qrCodeSize">
-                            <option value="2">32px</option>
-                            <option value="3">40px</option>
+                        <select 
+                            className="form-control" 
+                            id="qrCodeSize"
+                            value={qrCodeSize}
+                            onChange={(e) => setQrCodeSize(e.target.value)}
+                        >
+                            {renderSelectOptions(SIZE)}
                         </select>
                     </div>
                 </div>
                 <div className="row justify-content-center">
                     <div className="col-12 col-lg-8 form-group">
                         <textarea 
-                            className="form-control"
+                            className={`form-control${confirmed && !data? ' is-invalid' : ''}`}
                             placeholder="Enter your data here"
                             id="qrCodeData" 
                             rows="3" 

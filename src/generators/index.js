@@ -2,12 +2,12 @@ import qrcode from 'qrcode-generator';
 import domtoimage from 'dom-to-image';
 import {saveAs} from 'file-saver';
 
-export const generateQRCode = function(typeNumber=4, errorCorrectionLevel='L', data){
+export const generateQRCode = function(typeNumber, errorCorrectionLevel, data, size){
     try{
-        let qrcd = qrcode(typeNumber, errorCorrectionLevel);
+        let qrcd = qrcode(parseInt(typeNumber), errorCorrectionLevel);
         qrcd.addData(data);
         qrcd.make();
-        let tst = qrcd.createImgTag(5); 
+        let tst = qrcd.createImgTag(parseInt(size)); 
         return tst;
     }
     catch(err){
