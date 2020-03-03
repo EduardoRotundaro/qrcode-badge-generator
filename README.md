@@ -4,6 +4,8 @@
 
 > A QRCode generator. 
 
+### &nbsp;
+
 This project was made in React.js, inspired by an idea from [App Ideas Collection](https://github.com/florinpop17/app-ideas).
 
 ---
@@ -14,7 +16,7 @@ This project was made in React.js, inspired by an idea from [App Ideas Collectio
 
 ## Stack
 
-| Technology | Technology | Technology |
+| Lib | Lib | Lib |
 | ------ | ------ | ------ |
 | react | react-dom | react-scripts |
 | bootstrap | font-awesome | react-toastify |
