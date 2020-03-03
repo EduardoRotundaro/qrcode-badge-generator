@@ -12,7 +12,7 @@ This project was made in React.js, inspired by an idea from [App Ideas Collectio
 
 ## Demo
 
-[View](https://github.com/EduardoRotundaro/qrcode-badge-generator/).
+[View](https://eduardorotundaro.github.io/qrcode-badge-generator/).
 
 ## Stack
 

@@ -2,7 +2,7 @@
   "name": "qrcode-badge-generator",
   "author": "Eduardo Henrique Rotundaro",
   "version": "1.0.0",
-  "homepage": "https://github.com/EduardoRotundaro/qrcode-badge-generator",
+  "homepage": "https://eduardorotundaro.github.io/qrcode-badge-generator",
   "description": "A QRCode generator.",
   "private": true,
   "keywords": [
@@ -29,7 +29,8 @@
     "build": "react-scripts build",
     "postbuild": "purgecss --css build/static/css/*.css --content build/static/index.html build/static/js/*.js --out build/static/css",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "deploy": "gh-pages -d build"
   },
   "eslintConfig": {
     "extends": "react-app"
