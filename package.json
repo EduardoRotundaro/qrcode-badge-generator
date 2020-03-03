@@ -1,7 +1,7 @@
 {
   "name": "qrcode-badge-generator",
   "author": "Eduardo Henrique Rotundaro",
-  "version": "0.1.0",
+  "version": "1.0.0",
   "homepage": "https://github.com/EduardoRotundaro/qrcode-badge-generator",
   "description": "A QRCode generator.",
   "private": true,
