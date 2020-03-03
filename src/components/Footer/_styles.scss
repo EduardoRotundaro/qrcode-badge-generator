@@ -1,10 +1,25 @@
-footer{
+.footer{
     @extend .fixed-bottom;
     z-index: 99;
     background: $white;
-    .footer--version{
+    &__row{
+        @extend .row;
+        @extend .justify-content-center;
+    }
+    &__description{
+        @extend .mb-0;
+        @extend .text-center;
+    }
+    &__version{
         color: $primary;
         font-weight: bold;
         font-size: 12px;
+    }
+    &__github-link{
+        @extend .btn;
+        @extend .btn-block;
+        @extend .btn-outline-primary;
+        @extend .btn-sm;
+        @extend .mr-2;
     }
 }

@@ -1,0 +1,16 @@
+.actions{
+    @extend .row; 
+    @extend .justify-content-center;
+    
+    &__item{
+        @extend .col-12;
+        @extend .col-lg-2; 
+        @extend .mb-2;
+    }
+
+    &__button{
+        @extend .btn;
+        @extend .btn-block;
+        @extend .btn-secondary;
+    }
+}

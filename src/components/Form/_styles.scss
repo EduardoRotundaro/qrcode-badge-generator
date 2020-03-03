@@ -1,0 +1,22 @@
+.form{
+    &__row{
+        @extend .row; 
+        @extend .justify-content-center;
+    }
+    &__item{
+        @extend .form-group;
+        select, textarea{
+            @extend .form-control;
+        }
+    }
+    &__submit{
+        @extend .btn;
+        @extend .btn-primary;
+        @extend .btn-block;
+        i{
+            @extend .fa;
+            @extend .fa-lg;
+            @extend .fa-qrcode;
+        }
+    }
+}

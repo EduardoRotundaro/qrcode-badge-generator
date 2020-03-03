@@ -1,4 +1,6 @@
-.qrcode{
-    @extend .p-4;
-    border-radius: 5px;
+.placeholder{
+    &__qrcode{
+        @extend .p-4;
+        border-radius: 5px;
+    }
 }

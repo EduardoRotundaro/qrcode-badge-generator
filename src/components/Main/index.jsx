@@ -6,8 +6,8 @@ import Actions from '../Actions';
 
 export default () => {
     return (
-        <main>
-            <div className="container-fluid mt-4 mb-4">
+        <main className="main">
+            <div className="main__content">
                 <Form/>
                 <Placeholder/>
                 <Actions/>

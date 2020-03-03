@@ -1,5 +1,10 @@
-main{
+.main{
     margin-top: 150px;
     margin-bottom: 200px;
     z-index: 1;
+    &__content{
+        @extend .container-fluid;
+        @extend .mt-4;
+        @extend .mb-4;
+    }
 }

@@ -1,13 +1,14 @@
-header{
+.header{
     @extend .shadow;
     @extend .p-2;
     @extend .fixed-top;
     z-index: 1;
     background: $white;
-    img{
+    &__logo{
         height: 60px;
     }
-    .header--title{
+    &__title{
+        @extend .text-center;
         font-family: $font-secondary;
         color: $primary;
         font-size: 20px;

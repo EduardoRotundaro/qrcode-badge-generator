@@ -38,12 +38,11 @@ export default () => {
 
     return (
         <section>
-            <form>
-                <div className="row justify-content-center">
-                    <div className="col-12 col-lg-2 form-group">
+            <form className="form">
+                <div className="form__row">
+                    <div className="form__item col-12 col-lg-2">
                         <label htmlFor="typeNumber">Type Number</label>
-                        <select 
-                            className="form-control" 
+                        <select  
                             id="typeNumber"
                             value={typeNumber}
                             onChange={(e) => setTypeNumber(e.target.value)}
@@ -51,10 +50,9 @@ export default () => {
                             {renderSelectOptions(TYPE_NUMBER)}
                         </select>
                     </div>
-                    <div className="col-12 col-lg-3 form-group">
+                    <div className="form__item col-12 col-lg-3">
                         <label htmlFor="errorCorrectionLevel">Error Correction Level</label>
                         <select 
-                            className="form-control" 
                             id="errorCorrectionLevel"
                             value={errorCorrectionLevel}
                             onChange={(e) => setErrorCorrectionLevel(e.target.value)}
@@ -62,10 +60,9 @@ export default () => {
                             {renderSelectOptions(ERROR_CORRECTION_LEVEL)}
                         </select>
                     </div>
-                    <div className="col-12 col-lg-3 form-group">
+                    <div className="form__item col-12 col-lg-3">
                         <label htmlFor="qrCodeSize">QRCode Size</label>
                         <select 
-                            className="form-control" 
                             id="qrCodeSize"
                             value={qrCodeSize}
                             onChange={(e) => setQrCodeSize(e.target.value)}
@@ -74,10 +71,10 @@ export default () => {
                         </select>
                     </div>
                 </div>
-                <div className="row justify-content-center">
-                    <div className="col-12 col-lg-8 form-group">
+                <div className="form__row">
+                    <div className="form__item col-12 col-lg-8">
                         <textarea 
-                            className={`form-control${confirmed && !data? ' is-invalid' : ''}`}
+                            className={confirmed && !data? ' is-invalid' : ''}
                             placeholder="Enter your data here"
                             id="qrCodeData" 
                             rows="3" 
@@ -87,11 +84,9 @@ export default () => {
                         </textarea>
                     </div>
                 </div>
-                <div className="row justify-content-center">
+                <div className="form__row">
                     <div className="col-12 col-lg-3">
-                        <button type="button" className="btn btn-primary btn-block" onClick={generate}>
-                            <i className="fa fa-lg fa-qrcode"></i>&nbsp;MAKE
-                        </button>
+                        <button type="button" className="form__submit" onClick={generate}><i></i>&nbsp;MAKE</button>
                     </div>
                 </div>
             </form>

@@ -4,14 +4,14 @@ import logo from '../../images/logo.png';
 
 export default () => {
     return (
-        <header>
+        <header className="header">
             <div className="container">
                 <div className="row justify-content-center">
                     <div className="col-auto">
-                        <img src={logo} alt="QRCode Generator"/>
+                        <img className="header__logo" src={logo} alt="QRCode Generator"/>
                     </div>
-                    <div className="col-12 text-center">
-                        <span className="header--title">QRCODE GENERATOR</span>
+                    <div className="header__title col-12">
+                        <span>QRCODE GENERATOR</span>
                     </div>
                 </div>
             </div>

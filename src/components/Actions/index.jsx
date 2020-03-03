@@ -24,14 +24,14 @@ export default () => {
 
     return (
         <section>
-            <div className="row justify-content-center">
-                <div className="col-12 col-lg-2 mb-2">
-                    <button type="button" className="btn btn-block btn-secondary" onClick={() => download('png')}>
+            <div className="actions">
+                <div className="actions__item">
+                    <button type="button" className="actions__button" onClick={() => download('png')}>
                         <i className="fa fa-download"></i>&nbsp;Download as PNG
                     </button>
                 </div>
-                <div className="col-12 col-lg-2 mb-2">
-                    <button type="button" className="btn btn-block btn-secondary" onClick={() => download('jpeg')}>
+                <div className="actions__item">
+                    <button type="button" className="actions__button" onClick={() => download('jpeg')}>
                         <i className="fa fa-download"></i>&nbsp;Download as JPEG
                     </button>
                 </div>
