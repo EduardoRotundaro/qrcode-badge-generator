@@ -1,0 +1,23 @@
+{
+  "files": {
+    "main.css": "/qrcode-badge-generator/static/css/main.355ce468.chunk.css",
+    "main.js": "/qrcode-badge-generator/static/js/main.0694f9b8.chunk.js",
+    "main.js.map": "/qrcode-badge-generator/static/js/main.0694f9b8.chunk.js.map",
+    "runtime-main.js": "/qrcode-badge-generator/static/js/runtime-main.8812974c.js",
+    "runtime-main.js.map": "/qrcode-badge-generator/static/js/runtime-main.8812974c.js.map",
+    "static/js/2.f0d5ef68.chunk.js": "/qrcode-badge-generator/static/js/2.f0d5ef68.chunk.js",
+    "static/js/2.f0d5ef68.chunk.js.map": "/qrcode-badge-generator/static/js/2.f0d5ef68.chunk.js.map",
+    "index.html": "/qrcode-badge-generator/index.html",
+    "precache-manifest.ab371ddbb027a7b0b86c1ec1e822f789.js": "/qrcode-badge-generator/precache-manifest.ab371ddbb027a7b0b86c1ec1e822f789.js",
+    "service-worker.js": "/qrcode-badge-generator/service-worker.js",
+    "static/css/main.355ce468.chunk.css.map": "/qrcode-badge-generator/static/css/main.355ce468.chunk.css.map",
+    "static/js/2.f0d5ef68.chunk.js.LICENSE.txt": "/qrcode-badge-generator/static/js/2.f0d5ef68.chunk.js.LICENSE.txt",
+    "static/media/main.scss": "/qrcode-badge-generator/static/media/fontawesome-webfont.fee66e71.woff"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.8812974c.js",
+    "static/js/2.f0d5ef68.chunk.js",
+    "static/css/main.355ce468.chunk.css",
+    "static/js/main.0694f9b8.chunk.js"
+  ]
+}
